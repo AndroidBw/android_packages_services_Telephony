@@ -178,8 +178,8 @@ public class TelecomAccountRegistry {
             if (!newAccount.equals(mAccount)) {
                 Log.i(this, "reRegisterPstnPhoneAccount: subId: " + getSubId()
                         + " - re-register due to account change.");
-                mTelecomManager.registerPhoneAccount(newAccount);
-                mAccount = newAccount;
+                // mTelecomManager.registerPhoneAccount(newAccount);
+                // mAccount = newAccount;
             } else {
                 Log.i(this, "reRegisterPstnPhoneAccount: subId: " + getSubId() + " - no change");
             }
@@ -188,7 +188,7 @@ public class TelecomAccountRegistry {
         private PhoneAccount registerPstnPhoneAccount(boolean isEmergency, boolean isDummyAccount) {
             PhoneAccount account = buildPstnPhoneAccount(mIsEmergency, mIsDummy);
             // Register with Telecom and put into the account entry.
-            mTelecomManager.registerPhoneAccount(account);
+            // mTelecomManager.registerPhoneAccount(account);
             return account;
         }
 
